@@ -5,7 +5,7 @@ import axios from "axios";
 
 const elasticSearchUrl = 'http://e8c87a4a9ef1276cc88b50ce5ea83c7d.us-west-1.aws.found.io:9200/_search'
 const elasticUserName = 'guest';
-const elasticPassword = 'eguest1234';
+const elasticPassword = 'guest';
 
 
 var requestConfig = {};
