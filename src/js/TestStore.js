@@ -58,7 +58,7 @@ export class TestStore {
         self.error = false;
       } else {
         self.error = true;
-        self.errorMessage = "no record founded for search key: " + key
+        self.errorMessage = "no record found for search key: " + key
       }
 
       for (var i = 0; i< results.length; i++) {

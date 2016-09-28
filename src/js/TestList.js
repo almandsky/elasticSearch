@@ -21,27 +21,35 @@ export default class TestList extends React.Component {
       </tr>
     ))
     return <div className="container">
-      <h1>Elastic Search API</h1>
-      <div>
-        <input className="form-control" onKeyPress={this.searchTests.bind(this)}/>
+      <div className="row">
+        <div className="col-sm-12">
+          <h1>Elastic Search API</h1>
+        </div>
       </div>
-      <div className={error ? 'alert alert-danger' : 'collapse'}>{errorMessage}</div>
-      <div>
-        <table className="table table-striped">
-          <thead>
-            <tr>
-              <th>Test Id</th>
-              <th>Timestamp</th>
-              <th>User Id</th>
-              <th>Option</th>
-            </tr>
-          </thead>
-          <tbody>
-            {testList}
-          </tbody>
-        </table>
+      <div className="row">
+        <div className="col-sm-3">
+          <input className="form-control" 
+            onKeyPress={this.searchTests.bind(this)}
+            placeholder="press enter to search"
+          />
+          <div className={error ? 'alert alert-danger' : 'collapse'}>{errorMessage}</div>
+        </div>
+        <div className="col-sm-9">
+          <table className="table table-striped">
+            <thead>
+              <tr>
+                <th>Test</th>
+                <th>Timestamp</th>
+                <th>User Id</th>
+                <th>Option</th>
+              </tr>
+            </thead>
+            <tbody>
+              {testList}
+            </tbody>
+          </table>
+        </div>
       </div>
-      
     </div>
   }
 }
